@@ -1,6 +1,6 @@
 # Climan Laravel
 
-Laravel-Zero micro-framework'ü kullanılarak yazılan bir Consolda çalışan HTTP request CLI'dır.
+Laravel-Zero micro-framework'ü kullanılarak yazılan ve Consolda çalışan HTTP request CLI'dır.
 
 Verileri https://jsonplaceholder.typicode.com/ 'den çeker.
 
