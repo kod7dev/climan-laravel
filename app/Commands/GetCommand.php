@@ -29,11 +29,7 @@ class GetCommand extends Command
      */
     public function handle()
     {
-        # SORU: Ana site adresini ($SITE_URL) her yerde yazmak yerine 
-        # define(SITE_URL, "https://jsonplaceholder.typicode.com/") olarak nasıl yazarız.
-        $SITE_URL = "https://jsonplaceholder.typicode.com/";
-
-        $response = Http::get($SITE_URL . $this->argument("url"));
+        $response = Http::get(SITE_URL . $this->argument("url"));
 
         echo $response . "\n";
 
