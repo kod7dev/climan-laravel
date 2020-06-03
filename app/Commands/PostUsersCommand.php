@@ -3,23 +3,26 @@
 namespace App\Commands;
 
 use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Support\Facades\Http;
 use LaravelZero\Framework\Commands\Command;
 
-class InspiringCommand extends Command
+class PostUsersCommand extends Command
 {
     /**
      * The signature of the command.
      *
      * @var string
      */
-    protected $signature = 'inspiring {name=Artisan}';
+    protected $signature = 'post:users 
+                                {--name=},
+                                {--email=}';
 
     /**
      * The description of the command.
      *
      * @var string
      */
-    protected $description = 'Display an inspiring quote';
+    protected $description = 'Command description';
 
     /**
      * Execute the console command.
@@ -28,7 +31,16 @@ class InspiringCommand extends Command
      */
     public function handle()
     {
-        $this->info('Simplicity is the ultimate sophistication.');
+        echo $this->option('name');
+        echo "\n";
+        echo $this->option('email');
+        echo "\n";
+        /*
+        $response = Http::post(SITE_URL . "users", [
+            'name' => $this->option('name'),
+            'email' => $this->option('email'),
+        ]);
+        */
     }
 
     /**
@@ -37,7 +49,7 @@ class InspiringCommand extends Command
      * @param  \Illuminate\Console\Scheduling\Schedule $schedule
      * @return void
      */
-    public function schedule(Schedule $schedule)
+    public function schedule(Schedule $schedule): void
     {
         // $schedule->command(static::class)->everyMinute();
     }

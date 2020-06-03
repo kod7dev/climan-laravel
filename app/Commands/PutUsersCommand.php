@@ -3,16 +3,20 @@
 namespace App\Commands;
 
 use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Support\Facades\Storage;
 use LaravelZero\Framework\Commands\Command;
 
-class PutCommand extends Command
+class PutUsersCommand extends Command
 {
     /**
      * The signature of the command.
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'put:users 
+                            {userid : mail addres},
+                            {--name=}
+                            {--email=}';
 
     /**
      * The description of the command.
@@ -28,7 +32,18 @@ class PutCommand extends Command
      */
     public function handle()
     {
-        //
+        echo $this->argument('userid');
+        echo "\n";
+        echo $this->option('name');
+        echo "\n";
+        echo $this->option('email');
+        echo "\n";
+        /*
+        $response = Http::post(SITE_URL . "users", [
+            'name' => $this->option('name'),
+            'email' => $this->option('email'),
+        ]);
+        */
     }
 
     /**

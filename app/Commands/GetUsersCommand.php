@@ -3,24 +3,24 @@
 namespace App\Commands;
 
 use Illuminate\Console\Scheduling\Schedule;
-use LaravelZero\Framework\Commands\Command;
 use Illuminate\Support\Facades\Http;
+use LaravelZero\Framework\Commands\Command;
 
-class GetCommand extends Command
+class GetUsersCommand extends Command
 {
     /**
      * The signature of the command.
      *
      * @var string
      */
-    protected $signature = 'get {url : istek yapılacak url. <xyz.com/users> için <users> yazmak yeterli}';
-
+    protected $signature = 'get:users
+                            {userid=0}';
     /**
      * The description of the command.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = '';
 
     /**
      * Execute the console command.
@@ -29,10 +29,19 @@ class GetCommand extends Command
      */
     public function handle()
     {
-        $response = Http::get(SITE_URL . $this->argument("url"));
+        $userid = $this->argument('userid');
 
-        echo $response . "\n";
+        if ($userid == '0') {
+            // http://jsonplaceholder.typicode.com/users
+            echo Http::get(SITE_URL . "users");
+            echo "\n";
+        } else {
+            // http://jsonplaceholder.typicode.com/users/{userid}
+            echo Http::get(SITE_URL . "users/" . $userid);
+            echo "\n";
+        }
 
+        
     }
 
     /**
