@@ -39,7 +39,7 @@ class PutUsersCommand extends Command
         echo $this->option('email');
         echo "\n";
         /*
-        $response = Http::post(SITE_URL . "users", [
+        $response = Http::put(SITE_URL . "users", [
             'name' => $this->option('name'),
             'email' => $this->option('email'),
         ]);
