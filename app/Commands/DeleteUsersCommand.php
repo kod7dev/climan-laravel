@@ -13,8 +13,7 @@ class DeleteUsersCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'delete:users
-                                {userid}';
+    protected $signature = 'delete:users {userid}';
 
     /**
      * The description of the command.
@@ -32,8 +31,9 @@ class DeleteUsersCommand extends Command
     {
         // http://jsonplaceholder.typicode.com/users/{userid}
         
-        // Http::delete(SITE_URL . "users/" . $this->argument("userid"));
-        echo SITE_URL . "users/" . $this->argument("userid") . "\n";
+        // DELETE istek yapılacak adres
+        // echo SITE_URL . "users/" . $this->argument("userid") . "\n";
+        Http::delete(SITE_URL . "users/" . $this->argument("userid"));
     }
 
     /**

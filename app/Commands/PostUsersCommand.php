@@ -31,16 +31,18 @@ class PostUsersCommand extends Command
      */
     public function handle()
     {
-        echo $this->option('name');
-        echo "\n";
-        echo $this->option('email');
-        echo "\n";
-        /*
-        $response = Http::post(SITE_URL . "users", [
-            'name' => $this->option('name'),
-            'email' => $this->option('email'),
-        ]);
-        */
+        $name = $this->option('email');
+        $email = $this->option('email');
+
+        if ($email && $name) {
+            // POST istedği yapılacak adres ve gönderilecek data
+            $response = Http::post(SITE_URL . "users", [
+                'name' => $name,
+                'email' => $email,
+            ]);
+        } else {
+            $this->error('mail adresini ve kullanıcı adını yazınız');
+        }
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Commands;
 
 use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use LaravelZero\Framework\Commands\Command;
 
@@ -32,18 +33,20 @@ class PutUsersCommand extends Command
      */
     public function handle()
     {
-        echo $this->argument('userid');
-        echo "\n";
-        echo $this->option('name');
-        echo "\n";
-        echo $this->option('email');
-        echo "\n";
-        /*
-        $response = Http::put(SITE_URL . "users", [
-            'name' => $this->option('name'),
-            'email' => $this->option('email'),
-        ]);
-        */
+
+        $userid = $this->argument('userid');
+        $name = $this->option('name');
+        $email = $this->option('email');
+
+        if ($email && $name) {
+            // Güncellenecek user ve gönderilecek data
+            $response = Http::put(SITE_URL . "users/" . $userid, [
+                'name' => $name,
+                'email' => $email,
+            ]);
+        } else {
+            $this->error('mail adresini ve kullanıcı adını yazınız');
+        }
     }
 
     /**
