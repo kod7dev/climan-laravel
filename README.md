@@ -12,7 +12,7 @@ Terminal/Komut Satırı açılır.
 
 - `git clone https://github.com/kod7dev/climan-laravel.git` ile climan-laravel indirilir.
 
-![Installation](reaadme/kurulum.gif)
+![Installation](readme/kurulum.gif)
 
 ## Usage example
 
