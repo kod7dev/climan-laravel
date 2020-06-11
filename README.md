@@ -4,9 +4,15 @@ basit bir çak cümlelik açıklama
 
 ## Installation
 
-server uygulamasını indir.
+(Bilgisayarda Git SCM kurulu olmalı)
 
-bu nu clonla
+İstekleri atacağımız TestFull paketini indirmeliyiz.
+
+`git clone https://github.com/kod7dev/TestFull.git`
+
+Daha sonra climan-laravel'i indirmek için
+
+`git clone https://github.com/kod7dev/climan-laravel.git`
 
 ## Usage example
 
