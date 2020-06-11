@@ -4,11 +4,17 @@ basit bir çak cümlelik açıklama
 
 ## Installation
 
+### Linux
+
 (Bilgisayarda Git SCM kurulu olmalı)
+(Bilgisayarda NodeJS ve NPM kurulu olmalı)
 
 İstekleri atacağımız TestFull paketini indirmeliyiz.
 
-`git clone https://github.com/kod7dev/TestFull.git`
+`git clone https://github.com/kod7dev/TestFull.git` indirdikten sonra: 
+
+- `cd TestFull` ile indirilen klasörün içine girilir
+- `node index.js` ile TestFull çalıştırılır.
 
 Daha sonra climan-laravel'i indirmek için
 
