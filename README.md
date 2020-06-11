@@ -6,8 +6,6 @@ basit bir çak cümlelik açıklama
 
 (Bilgisayarda Git SCM, NodeJS ve NPM kurulu olmalı)
 
-İstekleri atacağımız TestFull paketini indirmeliyiz.
-
 Terminal/Komut Satırı açılır.
 
 - `git clone https://github.com/kod7dev/TestFull.git` ile TestFull indirilir.
