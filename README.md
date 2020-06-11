@@ -1,18 +1,28 @@
 # Climan Laravel
 
-Laravel-Zero kullanılarak yazılan ve Consolda çalışan HTTP request CLI'dır.
+basit bir çak cümlelik açıklama
 
 ## Installation
 
+server uygulamasını indir.
+
+bu nu clonla
+
 ## Usage example
 
-## Development setup
+kullanım örnekleri
 
 ## API References
 
+komutların anlamı
+
 ## Features
 
+özelliklker
+
 ## Credit
+
+yardımda bulunanlar
 
 ## License
 
