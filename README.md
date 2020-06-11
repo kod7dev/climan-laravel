@@ -10,16 +10,9 @@ basit bir çak cümlelik açıklama
 
 Terminal/Komut Satırı açılır.
 
-**Çalışma dizinine** `git clone https://github.com/kod7dev/TestFull.git` ile paketi indirdikten sonra: 
+- `git clone https://github.com/kod7dev/TestFull.git` ile TestFull indirilir.
 
-- `cd TestFull` ile indirilen klasörün içine girilir
-- `node index.js` ile TestFull çalıştırılır.
-
-Daha sonra climan-laravel'i **Çalışma dizinine**
-
-`git clone https://github.com/kod7dev/climan-laravel.git` ile indirdikten sonra: 
-
-- `cd climan-laravel` ile indirilen klasörün içine girilir
+- `git clone https://github.com/kod7dev/climan-laravel.git` ile climan-laravel indirilir.
 
 ## Usage example
 
