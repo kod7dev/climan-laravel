@@ -4,7 +4,7 @@ basit bir çak cümlelik açıklama
 
 ## Installation
 
-(Bilgisayarda Git SCM, NodeJS ve NPM kurulu olmalı)
+(Bilgisayarda Git, NodeJS ve NPM, Composer kurulu olmalı)
 
 Terminal/Komut Satırı açılır.
 
@@ -13,6 +13,26 @@ Terminal/Komut Satırı açılır.
 - `git clone https://github.com/kod7dev/climan-laravel.git` ile climan-laravel indirilir.
 
 ![Installation](readme/kurulum.gif)
+
+
+**climan-laravel**' için deki gerekli paketlerin kurulumu:
+
+```
+cd climan-laravel
+
+composer install
+```
+
+**TestFull** için gerekli paketlerin kurulumu:
+
+```
+cd TestFull
+
+npm install
+```
+
+![Installation](readme/paketlerin-kurulumu.gif)
+
 
 ## Usage example
 
