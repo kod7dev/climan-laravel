@@ -17,7 +17,7 @@ Terminal/Komut Satırı açılır.
 ![Installation](readme/kurulum.gif)
 
 
-**climan-laravel**' için deki gerekli paketlerin kurulumu:
+**climan-laravel** için gerekli paketlerin kurulumu:
 
 ```
 cd climan-laravel
