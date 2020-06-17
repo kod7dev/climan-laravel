@@ -5,7 +5,7 @@ define('LARAVEL_START', microtime(true));
 // TestFull'un çalıştırıldığı port
 define('TF_PORT', 3000);
 
-define('SITE_URL', "http://localhost:" . TF_PORT);
+define('SITE_URL', "http://localhost:" . TF_PORT . "/");
 
 /*
 |--------------------------------------------------------------------------

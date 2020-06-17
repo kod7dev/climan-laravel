@@ -4,6 +4,8 @@ basit bir çak cümlelik açıklama
 
 ## Installation
 
+### Linux
+
 (Bilgisayarda Git, NodeJS ve NPM, Composer kurulu olmalı)
 
 Terminal/Komut Satırı açılır.
@@ -33,10 +35,23 @@ npm install
 
 ![Installation](readme/paketlerin-kurulumu.gif)
 
+İstekleri karşılayacak TestFull programını çalıştırmak için 
+
+```
+cd TestFull
+
+node index.js
+```
 
 ## Usage example
 
-kullanım örnekleri
+```
+./climan-laravel get:users                  // tüm kullanıcıların bilgileri
+./climan-laravel get:users 3                // id'si 3 olan kullanıcının bilgileri
+
+./climan-laravel get:users 3 --posts        // id'si 3 olan kullanıcının tüm yazıları
+./climan-laravel get:users 3 --postid=10     // id'si 3 olan kullanıcının postid'si 10 olan yazısı
+```
 
 ## API References
 

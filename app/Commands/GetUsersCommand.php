@@ -14,13 +14,15 @@ class GetUsersCommand extends Command
      * @var string
      */
     protected $signature = 'get:users
-                            {userid=0}';
+                            {--postid=0 : İstenilen post\'un id\'si},
+                            {--posts : İstenilen post\'un id\'si},
+                            {userid=0 : Kullanıcı id\'si. 0 Tüm kullanıcılar demek}';
     /**
      * The description of the command.
      *
      * @var string
      */
-    protected $description = '';
+    protected $description = 'Bellli bir kullanıcıyı ya da tüm kullanıcılarıb bilgilerini listeler';
 
     /**
      * Execute the console command.
@@ -30,18 +32,28 @@ class GetUsersCommand extends Command
     public function handle()
     {
         $userid = $this->argument('userid');
+        $postid = $this->option('postid');
+        $posts  = $this->option('posts');
 
-        if ($userid == '0') {
-            // http://jsonplaceholder.typicode.com/users
-            echo Http::get(SITE_URL . "users");
-            echo "\n";
-        } else {
-            // http://jsonplaceholder.typicode.com/users/{userid}
-            echo Http::get(SITE_URL . "users/" . $userid);
-            echo "\n";
+
+        // id si belirtilen kullanıcının id si belirtilen post u
+        if ($userid != '0' && $postid != '0') {
+            echo Http::get(SITE_URL . "users/" . $userid . "/posts/" . $postid) . "\n";
         }
-
-        
+        // id si belirtilen kullanıcının tüm post ları
+        elseif ($userid != '0' && $posts) {
+            echo Http::get(SITE_URL . "users/" . $userid . "/posts") . "\n";
+        }
+        // id si belirtilen kullanıcının bilgileri
+        elseif ($userid != '0') {
+            echo Http::get(SITE_URL . "users/" . $userid) . "\n";
+        }
+        // tüm kullanıcılar
+        elseif ($userid == '0' && $posts == false && $postid == "0") {
+            echo Http::get(SITE_URL . "users/") . "\n";
+        } else {
+            $this->error("Tekrar deneyiniz");
+        }
     }
 
     /**
