@@ -62,7 +62,28 @@ node index.js
 
 ## API References
 
-komutların anlamı
+```
+
+  USAGE: climan-laravel <command> [options] [arguments]
+
+  test         Run the application tests
+
+  app:build    Build a single file executable
+  app:install  Install optional components
+  app:rename   Set the application name
+
+  delete:users Command description
+
+  get:users    Bellli bir kullanıcıyı ya da tüm kullanıcılarıb bilgilerini listeler
+
+  make:command Create a new command
+
+  post:users   Bellli bir kullanıcıyı ya da tüm kullanıcıları listeler
+
+  put:users    Command description
+
+  stub:publish Publish all stubs that are available for customization
+```
 
 ## Features
 

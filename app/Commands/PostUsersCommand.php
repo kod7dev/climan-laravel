@@ -29,7 +29,15 @@ class PostUsersCommand extends Command
      */
     public function handle()
     {
-        echo "eklendi";
+        $name = $this->ask('user name');
+        $email = $this->ask('user email');
+
+        $response = Http::post(SITE_URL . "users", [
+            'name' => $name,
+            'email' => $email,
+        ]);
+
+        echo $response . "\n";
     }
 
     /**
