@@ -1,6 +1,5 @@
 # Climan Laravel
 
-basit bir çak cümlelik açıklama
 
 ## Installation
 
@@ -87,14 +86,11 @@ node index.js
 
 ## Features
 
-özelliklker
+
 
 ## Credit
 
-yardımda bulunanlar
+
 
 ## License
 
-https://jsonplaceholder.typicode.com/ adresine GET, POST, PUT, DELETE isteklerini gönderir.
-
-Eğer başka site kullanılacaksa `climan-laravel` da **SITE_URL** sabitine istek atılacak adres yazılır
