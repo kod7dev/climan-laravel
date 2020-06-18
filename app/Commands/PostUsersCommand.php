@@ -13,9 +13,7 @@ class PostUsersCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'post:users 
-                                {--name=},
-                                {--email=}';
+    protected $signature = 'post:users';
 
     /**
      * The description of the command.
@@ -31,18 +29,7 @@ class PostUsersCommand extends Command
      */
     public function handle()
     {
-        $name = $this->option('email');
-        $email = $this->option('email');
-
-        if ($email && $name) {
-            // POST istedği yapılacak adres ve gönderilecek data
-            $response = Http::post(SITE_URL . "users", [
-                'name' => $name,
-                'email' => $email,
-            ]);
-        } else {
-            $this->error('mail adresini ve kullanıcı adını yazınız');
-        }
+        echo "eklendi";
     }
 
     /**

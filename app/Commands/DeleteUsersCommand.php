@@ -13,7 +13,7 @@ class DeleteUsersCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'delete:users {userid}';
+    protected $signature = 'delete:users {userid : silinecek kullanıcının id si}';
 
     /**
      * The description of the command.
@@ -33,7 +33,7 @@ class DeleteUsersCommand extends Command
         
         // DELETE istek yapılacak adres
         // echo SITE_URL . "users/" . $this->argument("userid") . "\n";
-        Http::delete(SITE_URL . "users/" . $this->argument("userid"));
+        echo Http::delete(SITE_URL . "users/" . $this->argument("userid")) . "\n";
     }
 
     /**
