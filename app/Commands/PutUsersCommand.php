@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use LaravelZero\Framework\Commands\Command;
 
+use function GuzzleHttp\json_decode;
+
 class PutUsersCommand extends Command
 {
     /**
@@ -24,7 +26,7 @@ class PutUsersCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Kullanıcı bilgilerini günceller';
 
     /**
      * Execute the console command.
@@ -35,18 +37,26 @@ class PutUsersCommand extends Command
     {
 
         $userid = $this->argument('userid');
-        $name = $this->option('name');
-        $email = $this->option('email');
 
-        if ($email && $name) {
-            // Güncellenecek user ve gönderilecek data
+        $user = (Http::get(SITE_URL . "users/" . $userid));
+
+        if ($user == '{"error":true,"msg":"Belirtilen id de user bulunamadı"}') {
+            echo $user . "\n";
+        } else {
+            $json = json_decode($user->__toString());
+
+            echo "Varsayılan değerde kalması için boş bırakınız.\n";
+            $name = $this->ask('name', $json->name);
+            $email = $this->ask('email', $json->email);
+
             $response = Http::put(SITE_URL . "users/" . $userid, [
                 'name' => $name,
                 'email' => $email,
             ]);
-        } else {
-            $this->error('mail adresini ve kullanıcı adını yazınız');
+
+            echo $response;
         }
+
     }
 
     /**

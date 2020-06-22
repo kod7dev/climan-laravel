@@ -62,26 +62,24 @@ node index.js
 ## API References
 
 ```
-
-  USAGE: climan-laravel <command> [options] [arguments]
-
-  test         Run the application tests
-
-  app:build    Build a single file executable
-  app:install  Install optional components
-  app:rename   Set the application name
-
-  delete:users Command description
+  _____ _ _                             _                           _ 
+ / ____| (_)                           | |                         | |
+| |    | |_ _ __ ___   __ _ _ __ ______| | __ _ _ __ __ ___   _____| |
+| |    | | | '_ ` _ \ / _` | '_ \______| |/ _` | '__/ _` \ \ / / _ \ |
+| |____| | | | | | | | (_| | | | |     | | (_| | | | (_| |\ V /  __/ |
+ \_____|_|_|_| |_| |_|\__,_|_| |_|     |_|\__,_|_|  \__,_| \_/ \___|_|
+                                                                      
+                                                                      
+  USAGE: ./climan-laravel <command> [options] [arguments]
 
   get:users    Bellli bir kullanıcıyı ya da tüm kullanıcılarıb bilgilerini listeler
 
-  make:command Create a new command
+  post:users   Kullanıcı ekler
 
-  post:users   Bellli bir kullanıcıyı ya da tüm kullanıcıları listeler
+  delete:users Kullanıcı siler
 
-  put:users    Command description
+  put:users    Kullanıcı bilgilerini günceller
 
-  stub:publish Publish all stubs that are available for customization
 ```
 
 ## Features

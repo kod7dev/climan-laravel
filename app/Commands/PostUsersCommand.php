@@ -20,7 +20,7 @@ class PostUsersCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Bellli bir kullanıcıyı ya da tüm kullanıcıları listeler';
+    protected $description = 'Kullanıcı ekler';
 
     /**
      * Execute the console command.
