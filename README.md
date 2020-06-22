@@ -85,11 +85,13 @@ node index.js
 
 ## Features
 
-
+[] Kullanıcılara ait post silme
+[] Kullanıcılara post ekleme
 
 ## Credit
 
-
+[Güven Atbakan](https://github.com/shibby)
 
 ## License
 
+MIT
