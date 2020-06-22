@@ -1,6 +1,6 @@
 # Climan Laravel
 
-(Laravel-Zero)[https://laravel-zero.com] ile HTTP requestleri yapan basit CLI
+[Laravel-Zero](https://laravel-zero.com) ile HTTP requestleri yapan basit CLI
 
 ## Installation
 
