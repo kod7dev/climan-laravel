@@ -1,5 +1,6 @@
 # Climan Laravel
 
+(Laravel-Zero)[https://laravel-zero.com] ile HTTP requestleri yapan basit CLI
 
 ## Installation
 
@@ -9,7 +10,7 @@
 
 Terminal/Komut Satırı açılır.
 
-- `git clone https://github.com/kod7dev/TestFull.git` ile TestFull indirilir.
+- `git clone https://github.com/kod7dev/TestFull.git` ile [TestFull](https://github.com/kod7dev/TestFull) indirilir.
 
 - `git clone https://github.com/kod7dev/climan-laravel.git` ile climan-laravel indirilir.
 
