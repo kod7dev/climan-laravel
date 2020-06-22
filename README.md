@@ -72,7 +72,7 @@ node index.js
                                                                       
   USAGE: ./climan-laravel <command> [options] [arguments]
 
-  get:users    Bellli bir kullanıcıyı ya da tüm kullanıcılarıb bilgilerini listeler
+  get:users    Bellli bir kullanıcıyı ya da tüm kullanıcıların bilgilerini listeler
 
   post:users   Kullanıcı ekler
 
