@@ -85,8 +85,9 @@ node index.js
 
 ## Features
 
-[] Kullanıcılara ait post silme
-[] Kullanıcılara post ekleme
+[ ] Kullanıcılara ait post silme
+
+[ ] Kullanıcılara post ekleme
 
 ## Credit
 
