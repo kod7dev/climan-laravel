@@ -48,6 +48,7 @@ class GetUsersCommand extends Command
         elseif ($userid != '0') {
             echo Http::get(SITE_URL . "users/" . $userid) . "\n";
         }
+        
         // tüm kullanıcılar
         elseif ($userid == '0' && $posts == false && $postid == "0") {
             echo Http::get(SITE_URL . "users/") . "\n";
