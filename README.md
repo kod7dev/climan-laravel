@@ -46,16 +46,16 @@ node index.js
 
 ```
 ./climan-laravel get:users                  // tüm kullanıcıların bilgileri
-./climan-laravel get:users 3                // id'si 3 olan kullanıcının bilgileri
+./climan-laravel get:users 15                // id'si 15 olan kullanıcının bilgileri
 
-./climan-laravel get:users 3 --posts        // id'si 3 olan kullanıcının tüm yazıları
-./climan-laravel get:users 3 --postid=10    // id'si 3 olan kullanıcının postid'si 10 olan yazısı
+./climan-laravel get:users 15 --posts        // id'si 15 olan kullanıcının tüm yazıları
+./climan-laravel get:users 15 --postid=10    // id'si 15 olan kullanıcının postid'si 10 olan yazısı
 
 ./climan-laravel post:users                 // kullanıcı ekler
 
-./climan-laravel delete:users 3             // id'si 3 olan kullanıcıyı siler.
+./climan-laravel put:users 15                // id'si 15 olan kullanıcıyı günceller.
 
-./climan-laravel put:users 3                // id'si 3 olan kullanıcıyı günceller.
+./climan-laravel delete:users 15             // id'si 15 olan kullanıcıyı siler.
 
 ```
 
